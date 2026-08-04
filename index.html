@@ -91,6 +91,17 @@ color:#aaa;
 from{opacity:0;transform:translateY(30px);}
 to{opacity:1;transform:translateY(0);}
 }
+  .memory-btn{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:12px;
+font-size:1rem;
+cursor:pointer;
+background:#ffd166;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -193,6 +204,96 @@ without remembering that conversation.
 
 </div>
 
+  <div class="container">
+
+<h2>📸 Memory Vault</h2>
+
+<button class="memory-btn" onclick="toggleMemory('home')">
+☕ First Time At My Home
+</button>
+
+<div id="home" style="display:none;">
+<img src="images/first coffee.jpeg" class="story-image">
+<img src="images/first coffee 2.jpeg" class="story-image">
+
+<p>
+The first time you visited my home.
+A simple memory that became one of my favourites.
+</p>
+</div>
+
+<button class="memory-btn" onclick="toggleMemory('birthday')">
+🎂 First Birthday
+</button>
+
+<div id="birthday" style="display:none;">
+<img src="images/bday.jpeg" class="story-image">
+
+<p>
+The first birthday memory together.
+</p>
+</div>
+
+<button class="memory-btn" onclick="toggleMemory('varanasi')">
+🪔 Varanasi
+</button>
+
+<div id="varanasi" style="display:none;">
+<img src="images/ganga aarti.jpeg" class="story-image">
+<img src="images/garnga arti 2.jpeg" class="story-image">
+
+<p>
+The chants.
+The peace.
+The conversations.
+The memories.
+</p>
+</div>
+
+<button class="memory-btn" onclick="toggleMemory('goa')">
+🌊 Goa Trip
+</button>
+
+<div id="goa" style="display:none;">
+<img src="images/goa.jpeg" class="story-image">
+<img src="images/goa 2.jpeg" class="story-image">
+
+<p>
+Our best trip.
+Also our biggest fight.
+Both unforgettable.
+</p>
+</div>
+
+<button class="memory-btn" onclick="toggleMemory('kerala')">
+🌴 Kerala
+</button>
+
+<div id="kerala" style="display:none;">
+<img src="images/panelist.jpeg" class="story-image">
+<img src="images/mid finger.jpeg" class="story-image">
+
+<p>
+Beautiful places.
+Questionable behaviour.
+Amazing memories.
+</p>
+</div>
+
+<button class="memory-btn" onclick="toggleMemory('helmet')">
+🩷 Favourite Pink Helmet
+</button>
+
+<div id="helmet" style="display:none;">
+<img src="images/pink helmet.jpeg" class="story-image">
+
+<p>
+Probably the most iconic thing you own.
+</p>
+</div>
+
+</div>
+  
 <footer>
 
 Made with ❤️
@@ -201,5 +302,21 @@ Made with ❤️
 
 </div>
 <!-- test -->
+
+<script>
+function toggleMemory(id){
+
+var x = document.getElementById(id);
+
+if(x.style.display === "none"){
+x.style.display = "block";
+}
+else{
+x.style.display = "none";
+}
+
+}
+</script>
+
 </body>
 </html>
