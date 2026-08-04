@@ -252,8 +252,8 @@ The memories.
 </button>
 
 <div id="goa" style="display:none;">
-<img src="images/goa.jpeg" class="story-image">
-<img src="images/goa 2.jpeg" class="story-image">
+<img src="images/goa.jpeg" class="story-image" onclick="openImage(this.src)">
+<img src="images/goa 2.jpeg" class="story-image"onclick="openImage(this.src)">
 
 <p>
 Also our biggest fight.
@@ -374,6 +374,13 @@ Probably the most iconic thing you own.
   </div>
 
 </div>
+  <div id="imagePopup" class="image-popup" onclick="closeImage()">
+
+  <span class="close-btn">×</span>
+
+  <img id="popupImage">
+
+</div>
 <footer>
 
 Made with ❤️
@@ -384,6 +391,7 @@ Made with ❤️
 <!-- test -->
 
 <script>
+
 function toggleMemory(id){
 
 var x = document.getElementById(id);
@@ -396,6 +404,25 @@ x.style.display = "none";
 }
 
 }
+
+
+// Photo Gallery Function
+
+function openImage(src){
+
+document.getElementById("imagePopup").style.display="flex";
+
+document.getElementById("popupImage").src=src;
+
+}
+
+
+function closeImage(){
+
+document.getElementById("imagePopup").style.display="none";
+
+}
+
 </script>
 
 </body>
